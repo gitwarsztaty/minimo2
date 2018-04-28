@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #636363;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.header {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px 0;
+}
+
+.menu {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item {
+  text-transform: uppercase;
+  font-family: 'Raleway';
+  font-size: 14px;
+}
+
+.menu-link {
+  color: #818181;
+  transition: 0.2s;
+}
+
+.menu-link:hover {
+  color: #000000;
+}
+
+.menu-button {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-button-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: black;
+}
+
+.menu-button-item:nth-child(2) {
+  top: 8px;
+}
+
+.image {
+  width: 100%;
+}
+
+.heading {
+  font-family: 'Playfair Display';
+  font-weight: 500;
+  color: #434343;
+}
+
+.text {
+  font-family: 'Raleway';
+  color: #818181;
+  line-height: 1.8;
+}
+
+.header-content {
+  margin: 50px 40px 0 40px;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+.article {
+  width: 46%;
+  margin-top: 30px;
+}
+
+.category {
+  font-family: 'Raleway';
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+.article-heading {
+  font-family: 'Playfair Display';
+  color: #434343;
+}
+
+.article-link {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+  color: #000000;
+  position: relative;
+  margin-left: 20px;
+}
+
+.article-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: 0.5s;
+}
+
+.article-link:hover:after {
+  width: 100%;
+}
+
+.newsletter {
+  background: #f0f0f0;
+  padding: 80px;
+  text-align: center;
+}
+
+.newsletter-heading {
+  font-size: 38px;
+  font-weight: 400;
+  font-family: 'Playfair Display';
+}
+
+.form {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #cdcdcd;
+}
+
+.form-input {
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 7px;
+  width: 100%;
+}
+
+.form-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.load-more {
+  display: block;
+  max-width: 150px;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  padding: 15px 30px;
+  text-align: center;
+  color: #000000;
+  font-family: 'Playfair Display';
+  transition: 0.3s;
+}
+
+.load-more:hover {
+  color: #ffffff;
+  background: #000000;
+}
+
+.footer {
+  background: #f0f0f0;
+  padding: 40px;
+  margin-top: 100px;
+}
+
+.footer-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-menu {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials-icon {
+  width: 15px;
+}
+
+@media (max-width: 650px) {
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    background: #ffffff;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+
+  .menu-open {
+    transform: translateY(0);
+  }
+
+  .menu-item {
+    margin-bottom: 30px;
+  }
+
+  .header {
+    padding: 0 10px;
+  }
+
+  .header-content {
+    margin: 20px 0 0 0;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .articles {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .article {
+    width: 100%;
+  }
+
+  .newsletter-heading {
+    font-size: 24px;
+  }
+
+  .form {
+    width: auto;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
